@@ -1,0 +1,72 @@
+<div class="controls">
+  <form class="form-inline pull-right">
+    <label>Group
+      <select>
+        <option>Any</option>
+        <option>Billing</option>
+        <option>Another group</option>
+        <option>Group 3</option>
+      </select>
+    </label>
+
+    <label>Language
+      <select>
+        <option>English</option>
+        <option>Deutsch</option>
+        <option>Polski</option>
+      </select>
+    </label>
+
+    <label>Hours
+      <select>
+        <option>4</option>
+        <option>8</option>
+        <option>12</option>
+        <option>24</option>
+      </select>
+    </label>&nbsp;&nbsp;
+    <button class="btn btn-primary">Go</button>
+  </form><br><br><br>
+</div>
+
+<div class="results well well-small">
+<table class="table">
+  <thead>
+    <th>
+      <td>Group</td>
+      <td>Subject</td>
+      <td>Requester</td>
+      <td>Assignee</td>
+      <td>Time Since Requested</td>
+      <td>Time Since Answered</td>
+      <td>Status</td>
+      {{!-- <td></td> --}}
+    </th>
+  </thead>
+  {{!-- {{#results}} --}}
+    <tr class="row">
+      <td>
+        Billing
+      </td>
+      <td>
+        Something happened here...
+      </td>
+      <td>
+        John Requester
+      </td>
+      <td>
+        Aaron Agent
+      </td>
+      <td>
+        5 hrs
+      </td>
+      <td>
+        2 hrs
+      </td>
+      <td>
+        Open
+      </td>
+    </tr>
+  {{!-- {{/results}} --}}
+</table>
+</div>
