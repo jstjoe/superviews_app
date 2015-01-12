@@ -4,3 +4,13 @@ thead {
 footer {
   display: none;
 }
+div.controls {
+  margin-bottom: 20px;
+}
+.controls select {
+  vertical-align: top;
+  margin-right: 20px;
+}
+button.filter {
+  vertical-align: top;
+}

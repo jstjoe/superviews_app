@@ -5,7 +5,9 @@
       'app.created':'onLoad',
 
       'getGroups.done':'gotGroups',
-      'getLocales.done':'gotLocales'
+      'getLocales.done':'gotLocales',
+
+      'click.filter':'filter'
     },
     // defaultState: 'mockup',
     requests: {
@@ -47,8 +49,17 @@
     gotViews: function() {
 
     },
-    filter: function() {
-      
+    filter: function(e) {
+      if(e) {e.preventDefault();}
+      var groups = this.$('select.group').val(),
+        locale = this.$('select.locale').val(),
+        hours = this.$('select.hour').val();
+
+
+
+    },
+    sort: function() {
+
     }
   };
 
