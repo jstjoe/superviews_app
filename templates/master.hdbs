@@ -2,7 +2,6 @@
   <form class="options form form-inline">
     <label>Group
       <select multiple class="group">
-        <option value="any">Any</option>
         {{#groups}}
         <option value="{{id}}">{{name}}</option>
         {{/groups}}
@@ -11,6 +10,7 @@
 
     <label>Language
       <select class="locale">
+        <option value="all">-</option>
         {{#locales}}
         <option value="{{id}}">{{locale}}</option>
         {{/locales}}
@@ -19,9 +19,10 @@
 
     <label>Hours
       <select class="hour">
-        <option>4</option>
-        <option>8</option>
-        <option>12</option>
+        <option value="all">-</option>
+        <option value="4">4</option>
+        <option value="8">8</option>
+        <option value="12">12</option>
         <option>24</option>
       </select>
     </label>
@@ -30,43 +31,43 @@
 </div>
 
 <div class="results well well-small">
-<table class="table">
-  <thead>
-    <th>
-      <td>Group</td>
-      <td>Subject</td>
-      <td>Requester</td>
-      <td>Assignee</td>
-      <td>Time Since Requested</td>
-      <td>Time Since Answered</td>
-      <td>Status</td>
-      {{!-- <td></td> --}}
-    </th>
-  </thead>
-  {{!-- {{#results}} --}}
-    <tr class="row">
-      <td>
-        Billing
-      </td>
-      <td>
-        Something happened here...
-      </td>
-      <td>
-        John Requester
-      </td>
-      <td>
-        Aaron Agent
-      </td>
-      <td>
-        5 hrs
-      </td>
-      <td>
-        4 hrs
-      </td>
-      <td>
-        Open
-      </td>
-    </tr>
-  {{!-- {{/results}} --}}
-</table>
+  <table class="table">
+    <thead>
+      <th>
+        <td>Group</td>
+        <td>Subject</td>
+        <td>Requester</td>
+        <td>Assignee</td>
+        <td>Time Since Requested</td>
+        <td>Time Since Answered</td>
+        <td>Status</td>
+        {{!-- <td></td> --}}
+      </th>
+    </thead>
+    {{#rows}}
+      <tr class="row">
+        <td>
+          {{group_id}}
+        </td>
+        <td>
+          {{subject}}
+        </td>
+        <td>
+          {{requester_id}}
+        </td>
+        <td>
+          {{assignee_id}}
+        </td>
+        <td>
+          5 hrs
+        </td>
+        <td>
+          4 hrs
+        </td>
+        <td>
+          {{ticket.status}}
+        </td>
+      </tr>
+    {{/rows}}
+  </table>
 </div>

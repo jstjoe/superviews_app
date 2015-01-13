@@ -9,5 +9,19 @@
   "private": true,
   "location": "nav_bar",
   "version": "0.0.0",
-  "frameworkVersion": "1.0"
+  "frameworkVersion": "1.0",
+  "parameters": [
+    {
+      "name":"View_1",
+      "required":true,
+      "type":"text",
+      "default": "4793797"
+    },
+    {
+      "name":"View_2",
+      "required":true,
+      "type":"text",
+      "default": "47940286"
+    }
+  ]
 }
