@@ -8,20 +8,20 @@
   "defaultLocale": "en",
   "private": true,
   "location": "nav_bar",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "frameworkVersion": "1.0",
   "parameters": [
     {
       "name":"View_1",
       "required":true,
       "type":"text",
-      "default": "47937976"
+      "default": "48343176"
     },
     {
       "name":"View_2",
       "required":true,
       "type":"text",
-      "default": "47940286"
+      "default": "48343196"
     }
   ]
 }
