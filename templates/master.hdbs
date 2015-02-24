@@ -39,8 +39,8 @@
         <td>Subject</td>
         <td>Requester</td>
         <td>Assignee</td>
-        <td>Time Since Requested</td>
-        <td>Time Since Answered</td>
+        {{!-- <td>Time Since Requested</td>
+        <td>Time Since Answered</td> --}}
         <td>Status</td>
         {{!-- <td></td> --}}
       </th>
@@ -59,14 +59,18 @@
           {{requester_id}}
         </td>
         <td>
-          {{assignee_id}}
+          {{#if assignee_id}}
+            {{assignee_id}}
+          {{else}}
+            n/a
+          {{/if}}
         </td>
-        <td>
+        {{!-- <td>
           -
         </td>
         <td>
           -
-        </td>
+        </td> --}}
         <td>
           {{ticket.status}}
         </td>
